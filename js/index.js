@@ -68,39 +68,24 @@ function renderWhiteSauce() {
   // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
   let sauce = document.querySelector('.sauce')
     if (state.whiteSauce){
-      sauce.classList.toggle('sauce-white');
+      sauce.classList.add('sauce-white');
     } else {
-      sauce.classList.toggle('sauce-white');
+      sauce.classList.remove('sauce-white');
     }
 }
 
 function renderGlutenFreeCrust() {
   // Iteration 2: add/remove the class "crust-gluten-free" of `<section class="crust">`
   let glutenFree = document.querySelector('.crust')
-  // if (state.glutenFreeCrust){
-  //   glutenFree.classList.toggle('crust-gluten-free');
-  // } else {
-  //   glutenFree.classList.toggle('crust-gluten-free');
-  // }
-
-  // Method 2
-  state.glutenFreeCrust 
-    ? glutenFree.classList.add('crust-gluten-free')
-    : glutenFree.classList.remove('crust-gluten-free')
-
+  if (state.glutenFreeCrust){
+    glutenFree.classList.add('crust-gluten-free');
+  } else {
+    glutenFree.classList.remove('crust-gluten-free');
+  }
 }
 
 function renderButtons() {
   // Iteration 3: add/remove the class "active" of each `<button class="btn">`
-  const buttons = document.querySelectorAll('.btn');
-  buttons.forEach( (button) => {
-    button.addEventListener('click', ()=>{
-      // vérifier le state true/false de l'ingrédient correspondant
-
-      // Activer ou pas le bouton
-      button.classList.toggle('active');
-    })
-  })
 }
 
 function renderPrice() {
